@@ -1,15 +1,8 @@
+let modulos = require("./modulos");
 
-let ca = require("./modulos/crearArchivos");
-let cf = require("./modulos/crearCarpetas");
 let nyr = "../Proyecto";
 
-function ct(nyr,err){
-    if (err) {
-        console.log("FATAL ERROR "+err);
-    } else {
-        cf(nyr);
-        ca(nyr);
-        console.log("Tu Proyecto Fue creado exitosamente :)")    
-    }
-};
-ct(nyr)
+modulos.create(nyr);
+
+// Para usar esta app solo debe ingresar "node app.js" en la consola y se creara la carpeta
+// puede modificar el nombre y la url en la variable nyr
